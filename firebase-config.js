@@ -4,12 +4,12 @@
 // ============================================================
 
 const firebaseConfig = {
-  apiKey: "ضع_القيمة_هون",
-  authDomain: "ضع_القيمة_هون",
-  projectId: "ضع_القيمة_هون",
-  storageBucket: "ضع_القيمة_هون",
-  messagingSenderId: "ضع_القيمة_هون",
-  appId: "ضع_القيمة_هون"
+  apiKey: "AIzaSyBPW81iRZDA64z-4VLDkNUlMHKdj039S84",
+  authDomain: "menu-cd0c8.firebaseapp.com",
+  projectId: "menu-cd0c8",
+  storageBucket: "menu-cd0c8.firebasestorage.app",
+  messagingSenderId: "633409214251",
+  appId: "1:633409214251:web:ec1d94f02b8fbfb73f576e"
 };
 
 firebase.initializeApp(firebaseConfig);
