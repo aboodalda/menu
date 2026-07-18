@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كافتيريا الزيتونة | المنيو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="brand">كافتيريا الزيتونة</h1>
+  <p class="tagline" id="tagline" data-text="اختر أصنافك وأضفها للسلة، ثم أرسل طلبك مباشرة للمطبخ"></p>
+</header>
+
+<div class="search-wrap">
+  <input type="text" id="searchInput" placeholder="🔍 دور على صنف...">
+</div>
+<nav class="tabs" id="tabs"></nav>
+<main id="menu"></main>
+
+<div class="cart-bar" id="cartBar">
+  <div class="info"><b id="cartCount">0</b> صنف · الإجمالي <b id="cartTotal">0</b> ₪</div>
+  <button id="openCheckout">إتمام الطلب</button>
+</div>
+
+<div class="overlay" id="checkoutOverlay">
+  <div class="sheet">
+    <h2>تأكيد الطلب</h2>
+    <div id="cartLines"></div>
+    <div class="sheet-total"><span>الإجمالي</span><span id="sheetTotal">0 ₪</span></div>
+    <div class="field">
+      <label>اسمك</label>
+      <input type="text" id="custName" placeholder="مثال: أحمد">
+    </div>
+    <div class="field">
+      <label>رقم الطاولة</label>
+      <input type="text" id="custTable" placeholder="مثال: 5">
+    </div>
+    <div class="field">
+      <label>ملاحظات (اختياري)</label>
+      <textarea id="custNotes" placeholder="مثلاً: بدون بصل، إضافة صوص حار..."></textarea>
+    </div>
+    <div class="error-msg" id="checkoutError"></div>
+    <button class="primary-btn" id="submitOrderBtn">إرسال الطلب للمطبخ</button>
+    <button class="ghost-btn" id="closeCheckout">تعديل السلة</button>
+  </div>
+</div>
+
+<div class="overlay" id="confirmOverlay">
+  <div class="sheet">
+    <div class="confirm-box">
+      <div style="font-size:2rem;">✅</div>
+      <p>وصل طلبك للمطبخ!</p>
+      <div class="num" id="orderNumberDisplay">#0</div>
+      <p style="font-size:.8rem;color:var(--grey);">رقم طلبك — احتفظ فيه لمتابعة حالته مع النادل</p>
+    </div>
+    <button class="primary-btn" id="newOrderBtn">طلب جديد</button>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="menu.js"></script>
+</body>
+</html>
