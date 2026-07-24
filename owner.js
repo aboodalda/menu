@@ -6,6 +6,7 @@ const CATEGORIES = [
   { id:"sweets", name:"حلويات" },
   { id:"argela", name: "أرجيلة" },
   { id:"ieckreem", name:"آيس كريم" },
+  { id:"fish", name:"أسماك" },
 ];
 const STATUS_FLOW = { 'جديد':'قيد التحضير', 'قيد التحضير':'جاهز للتسليم', 'جاهز للتسليم':'تم التسليم' };
 const STATUS_COLOR = { 'جديد':'var(--brass)', 'قيد التحضير':'var(--amber)', 'جاهز للتسليم':'var(--olive)', 'تم التسليم':'var(--grey)' };
